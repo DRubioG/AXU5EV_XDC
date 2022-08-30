@@ -4,6 +4,13 @@
 #set_property BITSTREAM.GENERAL.COMPRESS TRUE [current_design]
 
 
+## Clock
+#set_property -dict { PACKAGE_PIN AE5 IOSTANDARD DIFF_SSTL12 } [get_ports CLK_P];     # CLK_P
+#create_clock -period 5.000 -name CLK_P -waveform {0.000 2.500} [get_ports CLK_P];
+
+#set_property -dict { PACKAGE_PIN AF5 IOSTANDARD DIFF_SSTL12 } [get_ports CLK_N];     # CLK_N
+#create_clock -period 5.000 -name CLK_N -waveform {0.000 2.500} [get_ports CLK_N]
+
 
 
 
